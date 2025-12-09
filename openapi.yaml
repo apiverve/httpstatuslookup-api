@@ -1,0 +1,72 @@
+openapi: 3.0.4
+info:
+  title: HTTP Status Code Lookup
+  description: HTTP Status Code Lookup is a tool for looking up HTTP status code information. It provides descriptions, categories, and common causes for all standard HTTP status codes from 1xx to 5xx.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/httpstatuslookup:
+    get:
+      summary: Lookup HTTP Status Code
+      description: HTTP Status Code Lookup is a tool for looking up HTTP status code information. It provides descriptions, categories, and common causes for all standard HTTP status codes from 1xx to 5xx.
+      operationId: httpstatuslookup
+      parameters:
+      - name: code
+        in: query
+        schema:
+          type: string
+        required: true
+        description: HTTP status code to lookup (100-599)
+        example: '404'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  code: 404
+                  name: Not Found
+                  description: The requested resource could not be found
+                  category: Client Error
+                  is_error: true
+                  is_success: false
+                  is_redirect: false
+                  is_informational: false
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
