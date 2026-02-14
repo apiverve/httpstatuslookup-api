@@ -17,14 +17,11 @@ def call_httpstatuslookup_api():
     Make a GET request to the HTTP Status Code Lookup API
     """
     try:
-        # Query parameters
-        params &#x3D; {&#x27;code&#x27;: &#x27;404&#x27;}
-
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers, params=params)
+        response = requests.get(API_URL, headers=headers)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
