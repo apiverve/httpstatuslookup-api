@@ -1,32 +1,35 @@
 openapi: 3.0.4
 info:
   title: HTTP Status Code Lookup
-  description: HTTP Status Code Lookup is a tool for looking up HTTP status code information. It provides descriptions, categories, and common causes for all standard HTTP status codes from 1xx to 5xx.
+  description: >-
+    HTTP Status Code Lookup is a tool for looking up HTTP status code
+    information. It provides descriptions, categories, and common causes for all
+    standard HTTP status codes from 1xx to 5xx.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/httpstatuslookup:
     get:
       summary: Lookup HTTP Status Code
-      description: HTTP Status Code Lookup is a tool for looking up HTTP status code information. It provides descriptions, categories, and common causes for all standard HTTP status codes from 1xx to 5xx.
+      description: Get information about an HTTP status code
       operationId: httpstatuslookup
       parameters:
-      - name: code
-        in: query
-        schema:
-          type: string
-        required: true
-        description: HTTP status code to lookup (100-599)
-        example: '404'
+        - name: code
+          in: query
+          schema:
+            type: integer
+          required: true
+          description: HTTP status code to lookup
+          example: 404
       responses:
         '200':
           description: Successful Response
@@ -42,11 +45,11 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   code: 404
                   name: Not Found
@@ -61,7 +64,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -69,4 +72,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
