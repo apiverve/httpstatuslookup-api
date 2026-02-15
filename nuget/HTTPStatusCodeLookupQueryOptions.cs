@@ -11,8 +11,7 @@ namespace APIVerve.API.HTTPStatusCodeLookup
     public class HTTPStatusCodeLookupQueryOptions
     {
         /// <summary>
-        /// HTTP status code to lookup (100-599)
-        /// Example: 404
+        /// HTTP status code to lookup
         /// </summary>
         [JsonProperty("code")]
         public string Code { get; set; }
