@@ -1,0 +1,16 @@
+name: apiverve_httpstatuslookup
+description: HTTP Status Code Lookup is a tool for looking up HTTP status code information. It provides descriptions, categories, and common causes for all standard HTTP status codes from 1xx to 5xx.
+version: 1.1.14
+homepage: https://apiverve.com/marketplace/httpstatuslookup?utm_source=dart&utm_medium=homepage
+repository: https://github.com/apiverve/httpstatuslookup-api/tree/main/dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
