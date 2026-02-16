@@ -223,8 +223,9 @@ from apiverve_httpstatuscodelookup.apiClient import HttpstatuslookupAPIClient
 
 api = HttpstatuslookupAPIClient("[YOUR_API_KEY]")
 
+query = { "code": 404 }
+
 try:
-    query = { "code": 404 }
     result = api.execute(query)
     print(result)
 finally:
