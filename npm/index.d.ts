@@ -4,23 +4,35 @@ declare module '@apiverve/httpstatuslookup' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface httpstatuslookupResponse {
     status: string;
     error: string | null;
     data: HTTPStatusCodeLookupData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface HTTPStatusCodeLookupData {
-      code:            number;
-      name:            string;
-      description:     string;
-      category:        string;
-      isError:         boolean;
-      isSuccess:       boolean;
-      isRedirect:      boolean;
-      isInformational: boolean;
+      code:            number | null;
+      name:            null | string;
+      description:     null | string;
+      category:        null | string;
+      isError:         boolean | null;
+      isSuccess:       boolean | null;
+      isRedirect:      boolean | null;
+      isInformational: boolean | null;
   }
 
   export default class httpstatuslookupWrapper {
