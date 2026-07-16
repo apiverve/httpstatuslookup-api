@@ -14,6 +14,6 @@ namespace APIVerve.API.HTTPStatusCodeLookup
         /// HTTP status code to lookup
         /// </summary>
         [JsonProperty("code")]
-        public string Code { get; set; }
+        public int Code { get; set; }
     }
 }
