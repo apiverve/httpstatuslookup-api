@@ -25,12 +25,15 @@ namespace APIVerve.API.HTTPStatusCodeLookup
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("code")]
-        public long Code { get; set; }
+        public long? Code { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -42,15 +45,27 @@ namespace APIVerve.API.HTTPStatusCodeLookup
         public string Category { get; set; }
 
         [JsonProperty("is_error")]
-        public bool IsError { get; set; }
+        public bool? IsError { get; set; }
 
         [JsonProperty("is_success")]
-        public bool IsSuccess { get; set; }
+        public bool? IsSuccess { get; set; }
 
         [JsonProperty("is_redirect")]
-        public bool IsRedirect { get; set; }
+        public bool? IsRedirect { get; set; }
 
         [JsonProperty("is_informational")]
-        public bool IsInformational { get; set; }
+        public bool? IsInformational { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
