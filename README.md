@@ -191,11 +191,35 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the HTTP Status Code Lookup API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "code": 404,
+    "name": "Not Found",
+    "description": "The requested resource could not be found",
+    "category": "Client Error",
+    "is_error": true,
+    "is_success": false,
+    "is_redirect": false,
+    "is_informational": false
+  }
 }
 ```
 
