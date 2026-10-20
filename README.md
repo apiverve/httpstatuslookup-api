@@ -1,13 +1,13 @@
-# [HTTP Status Code Lookup API](https://apiverve.com/marketplace/httpstatuslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [HTTP Status Code Lookup API](https://apiverve.com/marketplace/httpstatuslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-HTTP Status Code Lookup is a tool for looking up HTTP status code information. It provides descriptions, categories, and common causes for all standard HTTP status codes from 1xx to 5xx.
+HTTP Status Code Lookup decodes any HTTP status code by returning its standard name and detailed description. Provide a numeric code to inspect its meaning and response behavior across standard ranges.
 
 The HTTP Status Code Lookup API provides a simple, reliable way to integrate http status code lookup functionality into your applications. Built for developers who need production-ready http status code lookup capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/httpstatuslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/httpstatuslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/httpstatuslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/httpstatuslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/httpstatuslookup-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [HTTP Status Code Lookup API](https://apiverve.com/marketplace/httpstatuslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [HTTP Status Code Lookup API](https://apiverve.com/marketplace/httpstatuslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/httpstatuslookup](https://docs.apiverve.com/ref/httpstatuslookup)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -227,7 +227,7 @@ A real response from the HTTP Status Code Lookup API:
 
 ## Support & Community
 
-- 🏠 **API Home**: [HTTP Status Code Lookup API](https://apiverve.com/marketplace/httpstatuslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [HTTP Status Code Lookup API](https://apiverve.com/marketplace/httpstatuslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
