@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/httpstatuslookup",
-  "version": "1.2.0",
-  "description": "HTTP Status Code Lookup is a tool for looking up HTTP status code information. It provides descriptions, categories, and common causes for all standard HTTP status codes from 1xx to 5xx.",
+  "version": "1.2.2",
+  "description": "HTTP Status Code Lookup decodes any HTTP status code by returning its standard name and detailed description. Provide a numeric code to inspect its meaning and response behavior across standard ranges.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/httpstatuslookup-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/httpstatuslookup?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/httpstatuslookup?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
