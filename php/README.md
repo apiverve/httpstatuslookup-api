@@ -1,6 +1,6 @@
 # HTTP Status Code Lookup API - PHP Package
 
-HTTP Status Code Lookup is a tool for looking up HTTP status code information. It provides descriptions, categories, and common causes for all standard HTTP status codes from 1xx to 5xx.
+HTTP Status Code Lookup decodes any HTTP status code by returning its standard name and detailed description. Provide a numeric code to inspect its meaning and response behavior across standard ranges.
 
 ## Installation
 
@@ -88,11 +88,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/httpstatuslookup?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/httpstatuslookup?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/httpstatuslookup?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/httpstatuslookup?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/httpstatuslookup?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/httpstatuslookup?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
