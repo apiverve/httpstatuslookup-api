@@ -1,11 +1,11 @@
 # HTTP Status Code Lookup API - Dart/Flutter Client
 
-HTTP Status Code Lookup is a tool for looking up HTTP status code information. It provides descriptions, categories, and common causes for all standard HTTP status codes from 1xx to 5xx.
+HTTP Status Code Lookup decodes any HTTP status code by returning its standard name and detailed description. Provide a numeric code to inspect its meaning and response behavior across standard ranges.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_httpstatuslookup.svg)](https://pub.dev/packages/apiverve_httpstatuslookup)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the Dart/Flutter client for the [HTTP Status Code Lookup API](https://apiverve.com/marketplace/httpstatuslookup?utm_source=dart&utm_medium=readme).
+This is the Dart/Flutter client for the [HTTP Status Code Lookup API](https://apiverve.com/marketplace/httpstatuslookup?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_httpstatuslookup: ^1.1.14
+  apiverve_httpstatuslookup: ^1.2.4
 ```
 
 Then run:
@@ -66,12 +66,12 @@ void main() async {
 
 ## API Reference
 
-- **API Home:** [HTTP Status Code Lookup API](https://apiverve.com/marketplace/httpstatuslookup?utm_source=dart&utm_medium=readme)
-- **Documentation:** [docs.apiverve.com/ref/httpstatuslookup](https://docs.apiverve.com/ref/httpstatuslookup?utm_source=dart&utm_medium=readme)
+- **API Home:** [HTTP Status Code Lookup API](https://apiverve.com/marketplace/httpstatuslookup?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/httpstatuslookup](https://docs.apiverve.com/ref/httpstatuslookup?utm_source=dart&utm_medium=referral&utm_content=readme)
 
 ## Authentication
 
-All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=readme).
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## License
 
@@ -79,4 +79,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=readme)
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)

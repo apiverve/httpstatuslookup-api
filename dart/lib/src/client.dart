@@ -46,7 +46,7 @@ final _formatPatterns = {
 
 /// HTTP Status Code Lookup API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/httpstatuslookup?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/httpstatuslookup?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [code] (required) - HTTP status code to lookup [min: 100, max: 599]
