@@ -67,7 +67,8 @@ namespace APIVerve.API.HTTPStatusCodeLookup
         /// <summary>Validation rules for parameters</summary>
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
-            { "code", new ValidationRule { Type = "integer", Required = true, Min = 100, Max = 599 } }
+            { "code", new ValidationRule { Type = "integer", Required = true, Min = 100, Max = 599 } },
+            { "details", new ValidationRule { Type = "boolean", Required = false } }
         };
 
         /// <summary>Format validation patterns</summary>

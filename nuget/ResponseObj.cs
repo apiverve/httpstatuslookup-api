@@ -55,6 +55,24 @@ namespace APIVerve.API.HTTPStatusCodeLookup
 
         [JsonProperty("is_informational")]
         public bool? IsInformational { get; set; }
+
+        [JsonProperty("registry_name")]
+        public string RegistryName { get; set; }
+
+        [JsonProperty("spec")]
+        public string Spec { get; set; }
+
+        [JsonProperty("spec_url")]
+        public Uri SpecUrl { get; set; }
+
+        [JsonProperty("is_retryable")]
+        public bool? IsRetryable { get; set; }
+
+        [JsonProperty("is_cacheable_by_default")]
+        public bool? IsCacheableByDefault { get; set; }
+
+        [JsonProperty("related_headers")]
+        public object[] RelatedHeaders { get; set; }
     }
 
     public partial class Premium

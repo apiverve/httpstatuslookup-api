@@ -15,5 +15,11 @@ namespace APIVerve.API.HTTPStatusCodeLookup
         /// </summary>
         [JsonProperty("code")]
         public int Code { get; set; }
+
+        /// <summary>
+        /// Also return the registry name, defining RFC section and link, retry and default-caching flags, and related headers
+        /// </summary>
+        [JsonProperty("details")]
+        public bool? Details { get; set; }
     }
 }
