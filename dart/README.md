@@ -1,6 +1,6 @@
 # HTTP Status Code Lookup API - Dart/Flutter Client
 
-HTTP Status Code Lookup decodes any HTTP status code by returning its standard name and detailed description. Provide a numeric code to inspect its meaning and response behavior across standard ranges.
+HTTP Status Code Lookup decodes any HTTP status code by returning its standard name and detailed description. Provide a numeric code to inspect its meaning and response behavior across standard ranges, and add details=true for a link to the defining RFC section, plus on paid plans its retry and caching behavior and the headers that go with it.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_httpstatuslookup.svg)](https://pub.dev/packages/apiverve_httpstatuslookup)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_httpstatuslookup: ^1.2.4
+  apiverve_httpstatuslookup: ^1.2.5
 ```
 
 Then run:
@@ -34,7 +34,8 @@ void main() async {
 
   try {
     final response = await client.execute({
-      'code': 404
+      'code': 404,
+      'details': true
     });
 
     print('Status: ${response.status}');
@@ -59,7 +60,13 @@ void main() async {
     "is_error": true,
     "is_success": false,
     "is_redirect": false,
-    "is_informational": false
+    "is_informational": false,
+    "registry_name": "Not Found",
+    "spec": "RFC 9110, Section 15.5.5",
+    "spec_url": "https://www.rfc-editor.org/rfc/rfc9110#section-15.5.5",
+    "is_retryable": false,
+    "is_cacheable_by_default": true,
+    "related_headers": []
   }
 }
 ```

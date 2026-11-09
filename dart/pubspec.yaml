@@ -1,6 +1,6 @@
 name: apiverve_httpstatuslookup
-description: "HTTP Status Code Lookup decodes any HTTP status code by returning its standard name and detailed description. Provide a numeric code to inspect its meaning and response behavior across standard ranges."
-version: 1.2.4
+description: "HTTP Status Code Lookup decodes any HTTP status code by returning its standard name and detailed description. Provide a numeric code to inspect its meaning and response behavior across standard ranges, and add details=true for a link to the defining RFC section, plus on paid plans its retry and caching behavior and the headers that go with it."
+version: 1.2.5
 homepage: https://apiverve.com/marketplace/httpstatuslookup?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/httpstatuslookup-api/tree/main/dart
 

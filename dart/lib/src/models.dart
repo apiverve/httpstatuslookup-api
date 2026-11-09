@@ -64,6 +64,12 @@ class HttpstatuslookupData {
   bool? isSuccess;
   bool? isRedirect;
   bool? isInformational;
+  String? registryName;
+  String? spec;
+  String? specUrl;
+  bool? isRetryable;
+  bool? isCacheableByDefault;
+  List<dynamic>? relatedHeaders;
 
   HttpstatuslookupData({
     this.code,
@@ -74,6 +80,12 @@ class HttpstatuslookupData {
     this.isSuccess,
     this.isRedirect,
     this.isInformational,
+    this.registryName,
+    this.spec,
+    this.specUrl,
+    this.isRetryable,
+    this.isCacheableByDefault,
+    this.relatedHeaders,
   });
 
   factory HttpstatuslookupData.fromJson(Map<String, dynamic> json) => HttpstatuslookupData(
@@ -85,17 +97,26 @@ class HttpstatuslookupData {
       isSuccess: json['is_success'],
       isRedirect: json['is_redirect'],
       isInformational: json['is_informational'],
+      registryName: json['registry_name'],
+      spec: json['spec'],
+      specUrl: json['spec_url'],
+      isRetryable: json['is_retryable'],
+      isCacheableByDefault: json['is_cacheable_by_default'],
+      relatedHeaders: (json['related_headers'] as List?)?.cast<dynamic>(),
     );
 }
 
 class HttpstatuslookupRequest {
   int code;
+  bool? details;
 
   HttpstatuslookupRequest({
     required this.code,
+    this.details,
   });
 
   Map<String, dynamic> toJson() => {
       'code': code,
+      if (details != null) 'details': details,
     };
 }

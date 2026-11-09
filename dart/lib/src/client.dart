@@ -50,6 +50,7 @@ final _formatPatterns = {
 ///
 /// Parameters:
 /// * [code] (required) - HTTP status code to lookup [min: 100, max: 599]
+/// * [details] - Also return the registry name, defining RFC section and link, retry and default-caching flags, and related headers
 class HttpstatuslookupClient {
   final String apiKey;
   final String baseUrl;
@@ -58,6 +59,7 @@ class HttpstatuslookupClient {
   /// Validation rules for parameters.
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
     'code': ValidationRule(type: 'integer', required: true, min: 100, max: 599),
+    'details': ValidationRule(type: 'boolean', required: false),
   };
 
   HttpstatuslookupClient(this.apiKey, {
