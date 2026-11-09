@@ -15,7 +15,7 @@ use APIVerve\Httpstatuslookup\Exceptions\ValidationException;
  * @example Basic usage
  * ```php
  * $client = new Client('your_api_key');
- * $response = $client->execute(['code' => 404]);
+ * $response = $client->execute(['code' => 404, 'details' => true]);
  * print_r($response);
  * ```
  *
@@ -34,7 +34,8 @@ class Client
      * Validation rules for parameters
      */
     private const VALIDATION_RULES = [
-        'code' => ['type' => 'integer', 'required' => true, 'min' => 100, 'max' => 599]
+        'code' => ['type' => 'integer', 'required' => true, 'min' => 100, 'max' => 599],
+        'details' => ['type' => 'boolean', 'required' => false]
     ];
 
     /**
