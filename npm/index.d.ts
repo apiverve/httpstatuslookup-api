@@ -25,14 +25,20 @@ declare module '@apiverve/httpstatuslookup' {
 
 
   interface HTTPStatusCodeLookupData {
-      code:            number | null;
-      name:            null | string;
-      description:     null | string;
-      category:        null | string;
-      isError:         boolean | null;
-      isSuccess:       boolean | null;
-      isRedirect:      boolean | null;
-      isInformational: boolean | null;
+      code:                 number | null;
+      name:                 null | string;
+      description:          null | string;
+      category:             null | string;
+      isError:              boolean | null;
+      isSuccess:            boolean | null;
+      isRedirect:           boolean | null;
+      isInformational:      boolean | null;
+      registryName:         null | string;
+      spec:                 null | string;
+      specURL:              null | string;
+      isRetryable:          boolean | null;
+      isCacheableByDefault: boolean | null;
+      relatedHeaders:       any[];
   }
 
   export default class httpstatuslookupWrapper {

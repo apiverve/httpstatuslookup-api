@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/httpstatuslookup",
-  "version": "1.2.4",
-  "description": "HTTP Status Code Lookup decodes any HTTP status code by returning its standard name and detailed description. Provide a numeric code to inspect its meaning and response behavior across standard ranges.",
+  "version": "1.2.5",
+  "description": "HTTP Status Code Lookup decodes any HTTP status code by returning its standard name and detailed description. Provide a numeric code to inspect its meaning and response behavior across standard ranges, and add details=true for a link to the defining RFC section, plus on paid plans its retry and caching behavior and the headers that go with it.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,

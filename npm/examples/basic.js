@@ -15,7 +15,8 @@ const api = new httpstatuslookupAPI({
 
 // Example query
 var query = {
-  code: 404
+  code: 404,
+  details: false
 };
 
 // Make the API request using callback

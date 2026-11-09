@@ -30,7 +30,7 @@ class httpstatuslookupWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/httpstatuslookup';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"code":{"type":"integer","required":true,"min":100,"max":599}};
+        this.validationRules = {"code":{"type":"integer","required":true,"min":100,"max":599},"details":{"type":"boolean","required":false,"default":false}};
     }
 
     /**
