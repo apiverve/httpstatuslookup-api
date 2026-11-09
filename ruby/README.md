@@ -1,6 +1,6 @@
 # HTTP Status Code Lookup API - Ruby Gem
 
-HTTP Status Code Lookup decodes any HTTP status code by returning its standard name and detailed description. Provide a numeric code to inspect its meaning and response behavior across standard ranges.
+HTTP Status Code Lookup decodes any HTTP status code by returning its standard name and detailed description. Provide a numeric code to inspect its meaning and response behavior across standard ranges, and add details=true for a link to the defining RFC section, plus on paid plans its retry and caching behavior and the headers that go with it.
 
 ## Installation
 
@@ -35,7 +35,10 @@ require 'apiverve_httpstatuslookup'
 client = APIVerve::Httpstatuslookup::Client.new(api_key: "YOUR_API_KEY")
 
 # Make a request
-response = client.execute({ code: 404 })
+response = client.execute({
+  code: 404,
+  details: true
+})
 
 # Print the response
 puts response
@@ -46,7 +49,7 @@ puts response
 
 ```ruby
 begin
-  response = client.execute({ code: 404 })
+  response = client.execute({ code: 404, details: true })
   puts response["data"]
 rescue APIVerve::Httpstatuslookup::ValidationError => e
   puts "Validation error: #{e.errors.join(', ')}"
@@ -80,7 +83,13 @@ client = APIVerve::Httpstatuslookup::Client.new(
     "is_error": true,
     "is_success": false,
     "is_redirect": false,
-    "is_informational": false
+    "is_informational": false,
+    "registry_name": "Not Found",
+    "spec": "RFC 9110, Section 15.5.5",
+    "spec_url": "https://www.rfc-editor.org/rfc/rfc9110#section-15.5.5",
+    "is_retryable": false,
+    "is_cacheable_by_default": true,
+    "related_headers": []
   }
 }
 ```

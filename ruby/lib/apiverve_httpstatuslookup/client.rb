@@ -10,7 +10,7 @@ module APIVerve
     #
     # @example Basic usage
     #   client = APIVerve::Httpstatuslookup::Client.new(api_key: "your_api_key")
-    #   response = client.execute({ code: 404 })
+    #   response = client.execute({ code: 404, details: true })
     #   puts response
     #
     # @see https://apiverve.com/marketplace/httpstatuslookup?utm_source=ruby&utm_medium=referral&utm_content=readme
@@ -19,7 +19,7 @@ module APIVerve
       DEFAULT_TIMEOUT = 30
 
       # Validation rules for parameters
-      VALIDATION_RULES = { 'code' => { type: 'integer', required: true, min: 100, max: 599 } }
+      VALIDATION_RULES = { 'code' => { type: 'integer', required: true, min: 100, max: 599 }, 'details' => { type: 'boolean', required: false } }
 
       # Format validation patterns
       FORMAT_PATTERNS = {
