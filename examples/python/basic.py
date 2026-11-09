@@ -18,7 +18,7 @@ def call_httpstatuslookup_api():
     """
     try:
         # Query parameters
-        params &#x3D; {&#x27;code&#x27;: 404}
+        params &#x3D; {&#x27;code&#x27;: 404, &#x27;details&#x27;: true}
 
         headers = {
             'x-api-key': API_KEY

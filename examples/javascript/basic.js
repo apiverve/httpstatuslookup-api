@@ -15,7 +15,8 @@ async function callHTTPStatusCodeLookupAPI() {
   try {
     // Query parameters
     const params &#x3D; new URLSearchParams({
-            code: 404
+            code: 404,
+            details: true
         });
 
     const response = await fetch(`${API_URL}?${params}`, {

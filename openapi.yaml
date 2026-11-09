@@ -4,7 +4,9 @@ info:
   description: >-
     HTTP Status Code Lookup decodes any HTTP status code by returning its
     standard name and detailed description. Provide a numeric code to inspect
-    its meaning and response behavior across standard ranges.
+    its meaning and response behavior across standard ranges, and add
+    details=true for a link to the defining RFC section, plus on paid plans its
+    retry and caching behavior and the headers that go with it.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -20,7 +22,9 @@ paths:
   /v1/httpstatuslookup:
     get:
       summary: HTTP Status Code Lookup
-      description: Get information about an HTTP status code
+      description: >-
+        Get information about an HTTP status code, optionally with its RFC
+        reference, retry and caching behavior, and related headers
       operationId: httpstatuslookup
       parameters:
         - name: code
@@ -30,6 +34,15 @@ paths:
           required: true
           description: HTTP status code to lookup
           example: 404
+        - name: details
+          in: query
+          schema:
+            type: boolean
+          required: false
+          description: >-
+            Also return the registry name, defining RFC section and link, retry
+            and default-caching flags, and related headers
+          example: true
       responses:
         '200':
           description: Successful Response
@@ -59,6 +72,12 @@ paths:
                   is_success: false
                   is_redirect: false
                   is_informational: false
+                  registry_name: Not Found
+                  spec: RFC 9110, Section 15.5.5
+                  spec_url: https://www.rfc-editor.org/rfc/rfc9110#section-15.5.5
+                  is_retryable: false
+                  is_cacheable_by_default: true
+                  related_headers: []
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':

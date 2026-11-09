@@ -1,6 +1,6 @@
 # [HTTP Status Code Lookup API](https://apiverve.com/marketplace/httpstatuslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-HTTP Status Code Lookup decodes any HTTP status code by returning its standard name and detailed description. Provide a numeric code to inspect its meaning and response behavior across standard ranges.
+HTTP Status Code Lookup decodes any HTTP status code by returning its standard name and detailed description. Provide a numeric code to inspect its meaning and response behavior across standard ranges, and add details&#x3D;true for a link to the defining RFC section, plus on paid plans its retry and caching behavior and the headers that go with it.
 
 The HTTP Status Code Lookup API provides a simple, reliable way to integrate http status code lookup functionality into your applications. Built for developers who need production-ready http status code lookup capabilities without the complexity of building from scratch.
 
@@ -31,7 +31,8 @@ The HTTP Status Code Lookup API provides a simple, reliable way to integrate htt
 async function callHTTPStatusCodeLookupAPI() {
     try {
         const params = new URLSearchParams({
-            code: 404
+            code: 404,
+            details: true
         });
 
         const response = await fetch(`https://api.apiverve.com/v1/httpstatuslookup?${params}`, {
@@ -54,7 +55,7 @@ callHTTPStatusCodeLookupAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/httpstatuslookup?code=404" \
+curl -X GET "https://api.apiverve.com/v1/httpstatuslookup?code=404&details=true" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -218,7 +219,13 @@ A real response from the HTTP Status Code Lookup API:
     "is_error": true,
     "is_success": false,
     "is_redirect": false,
-    "is_informational": false
+    "is_informational": false,
+    "registry_name": "Not Found",
+    "spec": "RFC 9110, Section 15.5.5",
+    "spec_url": "https://www.rfc-editor.org/rfc/rfc9110#section-15.5.5",
+    "is_retryable": false,
+    "is_cacheable_by_default": true,
+    "related_headers": []
   }
 }
 ```
